@@ -17,7 +17,7 @@ const Feed = (props) => {
     } = props;
 
     const [isVoting,setIsVoting] = useState(true);
-    const [selection,setSelection] = useState(null);
+    const [selection,setSelection] = useState('up');
 
     const [valsThumbs,setValsThumbs] = useState({
         up: nThumbUp,
