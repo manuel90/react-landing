@@ -1,0 +1,33 @@
+{
+  "name": "zemo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-animated-css": "^1.2.1",
+    "react-dom": "^16.13.0",
+    "react-grid-system": "^6.2.4",
+    "react-scripts": "^3.4.0",
+    "sass-loader": "^8.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

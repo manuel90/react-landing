@@ -1,0 +1,204 @@
+@import '../../variables.scss';
+
+.single-feed {
+    position: relative;
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    min-height: 100%;
+    width: 100%;
+    .gradient {
+        background-image: url('../../images/gradient-feed.png');
+        background-position: left bottom;
+        background-repeat: repeat-x;
+        background-color: transparent;
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+        height: calc(100% - 40px);
+        width: 100%;
+        z-index: 1;
+    }
+    .sf-content {
+        position: relative;
+        margin-top: 350px;
+        padding-bottom: 45px;
+        color: #fff;
+        z-index: 2;
+        .wrap-title {
+            position: relative;
+            .current-rate {
+                position: absolute;
+                left: 0;
+                bottom: 5px;
+                display: block;
+                height: 25px;
+                width: 25px;
+                i {
+                    background-color: transparent;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    display: block;
+                    height: 70%;
+                    width: 70%;
+
+                    &::before {
+                        content: "";
+                        background-color: transparent;
+                        background-image: url('../../images/thumb.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                &.thumb-up {
+                    background-color: $colorGreenVote;
+                }
+                &.thumb-down {
+                    background-color: $colorYellowVote;
+                    i::before {
+                        transform: rotate(180deg);
+                    }
+                }
+                
+            }
+            h3 {
+                margin: 0 0 0 35px;
+                font-size: 35px;
+                line-height: 35px;
+            }
+            
+        }
+
+        .wrap-information {
+            margin-left: 35px;
+            color: #fff;
+            .wrap-vote-action {
+                &.thank-you {
+                    .btn-vote-now {
+                        margin-left: 0;
+                    }
+                }
+                .wrap-selection {
+                    margin-bottom: 10px;
+                    float: left;
+                    .wrap-radio-thumb {
+                        cursor: pointer;
+                        float: left;
+                        display: block;
+                        position: relative;
+                        height: 35px;
+                        width: 35px;
+                        &.selected {
+                            border: 1px solid #fff;
+                        }
+                        i {
+                            background-color: transparent;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                            display: block;
+                            height: 65%;
+                            width: 65%;
+        
+                            &::before {
+                                content: "";
+                                background-color: transparent;
+                                background-image: url('../../images/thumb.svg');
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                display: block;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        &.thumb-up {
+                            background-color: $colorGreenVote;
+                        }
+                        &.thumb-down {
+                            margin-left: 10px;
+                            background-color: $colorYellowVote;
+                            i::before {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+                .btn-vote-now {
+                    margin-left: 10px;
+                    float: left;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    background-color: rgba(0,0,0,0.5);
+                    font-weight: 600;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+
+    .results-voting {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 40px;
+        width: 100%;
+        .bar-thumb {
+            float: left;
+            height: 100%;
+            //min-width: 115px;
+            overflow: hidden;
+            &.bar-thumb-up {
+                background-color: $colorGreenVote;
+            }
+            &.bar-thumb-down {
+                background-color: $colorYellowVote;
+            }
+            .wrap-perc-thumb {
+                height: 100%;
+                color: #fff;
+                display: block;
+                &.down {
+                    .icon-thumb {
+                        float: right;
+                        transform: rotate(180deg);
+                    }
+                    .lbl-perc {
+                        float: right;
+                    }
+                }
+                .icon-thumb {
+                    float: left;
+                    display: block;
+                    background-color: transparent;
+                    background-image: url('../../images/thumb.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    margin: 3% 5px;
+                    height: 70%;
+                    width: 35px;
+                    &.thumb-down {
+                        transform: rotate(180deg);
+                    }
+                }
+                .lbl-perc {
+                    display: block;
+                    float: left;
+                    font-size: 25px;
+                    line-height: 40px;
+                    font-weight: 600;
+                    @include breakPointXs {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
