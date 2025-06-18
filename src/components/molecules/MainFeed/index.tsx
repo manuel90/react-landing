@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./MainFeed.module.scss";
+import Link from "next/link";
 
 export const MainFeed: React.FC = () => {
   return (
@@ -15,9 +16,9 @@ export const MainFeed: React.FC = () => {
             pontiff? (thumbs up)
           </p>
           <span className={styles.moreInfo}>
-            <a href="#more" target="_blank">
+            <Link href="#more" target="_blank">
               More information
-            </a>
+            </Link>
           </span>
           <h5>What&apos;s Your Veredict?</h5>
         </div>

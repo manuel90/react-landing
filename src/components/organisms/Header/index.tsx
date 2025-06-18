@@ -18,7 +18,7 @@ export const Header = () => {
             <div className={styles.wrapLogo}>
               <div className={styles.wrapLogo}>
                 <h1>
-                  <Link href="/react-landing/">Rule of Thumb.</Link>
+                  <Link href="/">Rule of Thumb.</Link>
                 </h1>
               </div>
               <MainMenu />

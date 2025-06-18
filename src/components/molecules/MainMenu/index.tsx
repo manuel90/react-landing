@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 
 import styles from "./MainMenu.module.scss";
+import Link from "next/link";
 
 export const MainMenu: React.FC = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -19,13 +20,13 @@ export const MainMenu: React.FC = () => {
         </span>
         <ul className={isOpened ? styles.open : ""}>
           <li>
-            <a href="#">Past Trials</a>
+            <Link href="#">Past Trials</Link>
           </li>
           <li>
-            <a href="#">How It Works</a>
+            <Link href="#">How It Works</Link>
           </li>
           <li>
-            <a href="#">Log In / Sign Up</a>
+            <Link href="#">Log In / Sign Up</Link>
           </li>
         </ul>
       </nav>
