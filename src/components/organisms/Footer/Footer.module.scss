@@ -1,0 +1,18 @@
+.footer {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	min-height: 100px;
+	width: 100%;
+	padding: 15px 0;
+	color: #fff;
+	.link {
+		cursor: pointer;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

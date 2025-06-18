@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "/images/kanye.png",
+    "title": "Kanye West",
+    "timeAgo": "1 month ago",
+    "nameSource": "Entertaiment",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacus libero, tincidunt ac turpis quis, ornare pulvinar dui.",
+    "nThumbUp": 79,
+    "nThumbDown": 76
+  },
+  {
+    "id": 2,
+    "imageUrl": "./images/mark.png",
+    "title": "Mark Zuckerberg",
+    "timeAgo": "1 month ago",
+    "nameSource": "Business",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacus libero, tincidunt ac turpis quis, ornare pulvinar dui.",
+    "nThumbUp": 53,
+    "nThumbDown": 125
+  },
+  {
+    "id": 3,
+    "imageUrl": "./images/cristina.png",
+    "title": "Cristina Fernández de Kirchner",
+    "timeAgo": "1 month ago",
+    "nameSource": "Polítics",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacus libero, tincidunt ac turpis quis, ornare pulvinar dui.",
+    "nThumbUp": 29,
+    "nThumbDown": 68
+  },
+  {
+    "id": 4,
+    "imageUrl": "./images/malala.png",
+    "title": "Malala Yousafzai",
+    "timeAgo": "1 month ago",
+    "nameSource": "Entertaiment",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacus libero, tincidunt ac turpis quis, ornare pulvinar dui. tincidunt ac turpis quis, ornare pulvinar dui. Consectetur adipiscing elit. Phasellus lacus libero, tincidunt ac turpis quis, ornare pulvinar dui.",
+    "nThumbUp": 75,
+    "nThumbDown": 47
+  }
+]

@@ -1,0 +1,38 @@
+.wrapPercThumb {
+  height: 100%;
+  color: #fff;
+  display: block;
+  &.down {
+    .iconThumb {
+      float: right;
+      transform: rotate(180deg);
+    }
+    .lblPerc {
+      float: right;
+    }
+  }
+  .iconThumb {
+    float: left;
+    display: block;
+    background-color: transparent;
+    background-image: url("./images/thumb.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 3% 5px;
+    height: 70%;
+    width: 35px;
+    &.thumbDown {
+      transform: rotate(180deg);
+    }
+  }
+  .lblPerc {
+    display: block;
+    float: left;
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 600;
+    @include breakPointXs {
+      font-size: 18px;
+    }
+  }
+}

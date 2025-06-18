@@ -1,0 +1,22 @@
+version: '3.8'
+
+name: react_landing
+
+services:
+  nodejs:
+    container_name: react_landing_nodejs
+    build:
+      context: .
+      args:
+        - NODE_VERSION=22.11.0
+    volumes:
+      - './:/home/app'
+    ports:
+      - "8881:3000"
+    networks:
+      - react_landing_net
+networks:
+  react_landing_net:
+    name: react_landing_net_name
+    driver: bridge
+    

@@ -1,0 +1,68 @@
+.menuNav {
+  float: right;
+  ul {
+    padding: 0;
+    margin: 0;
+    @include breakPointSm {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      min-width: 250px;
+      top: 100%;
+      z-index: 5;
+    }
+    @include breakPointXs {
+      min-width: 100%;
+      top: calc(100% + 10px);
+    }
+    &.open {
+      display: block !important;
+    }
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    li {
+      float: left;
+      list-style-type: none;
+      padding: 0;
+      margin: 12px 15px;
+      @include breakPointSm {
+        float: none;
+        display: block;
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        font-family: "Lato";
+        font-weight: 300;
+        @include breakPointSm {
+          padding: 5px 0;
+          display: block;
+          width: 100%;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .menuBurguer {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: none;
+    @include breakPointSm {
+      display: block;
+    }
+    @include breakPointXs {
+      text-align: center;
+    }
+  }
+}

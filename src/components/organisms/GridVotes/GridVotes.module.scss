@@ -1,0 +1,19 @@
+.colFeed {
+  padding: 10px 0;
+  width: 50%;
+}
+
+.marginSection { 
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  @include breakPointMd {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}

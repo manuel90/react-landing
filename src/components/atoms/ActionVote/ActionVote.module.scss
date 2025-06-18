@@ -1,0 +1,46 @@
+.wrapSelection {
+  margin-bottom: 10px;
+  float: left;
+  .wrapRadioThumb {
+    cursor: pointer;
+    float: left;
+    display: block;
+    position: relative;
+    height: 35px;
+    width: 35px;
+    &.selected {
+      border: 1px solid #fff;
+    }
+    i {
+      background-color: transparent;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      height: 65%;
+      width: 65%;
+
+      &::before {
+        content: "";
+        background-color: transparent;
+        background-image: url("./images/thumb.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &.thumbUp {
+      background-color: $colorGreenVote;
+    }
+    &.thumbDown {
+      margin-left: 10px;
+      background-color: $colorYellowVote;
+      i::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
