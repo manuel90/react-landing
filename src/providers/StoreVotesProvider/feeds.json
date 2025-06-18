@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "imageUrl": "/images/kanye.png",
+    "imageUrl": "./images/kanye.png",
     "title": "Kanye West",
     "timeAgo": "1 month ago",
     "nameSource": "Entertaiment",
