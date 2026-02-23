@@ -3,8 +3,9 @@ import { useState } from "react";
 //Interfaces and types
 export type ArrayActionsType<T> = {
   add: (newValue: T) => T[];
-  remove: (idx: number) => T[];
+  remove: (idx: number) => void;
   set: (idx: number | string, newValue: T) => T[];
+  setById: <K extends keyof T>(keyId: K, id: string | number, newValue: T) => T[];
   change: (values: T[]) => void;
   exists: <T, K extends keyof T>(
     state: T[],
@@ -36,26 +37,11 @@ export function useArrayState<T>(
   };
 
   const remove = (index: number) => {
-    let returnVal: T[] = [];
-    setState((currentState) => {
-      const newState = [...currentState];
-      newState.splice(index, 1);
-      returnVal = [...newState];
-      return [...newState];
-    });
-    return returnVal;
+    setState((currentState) => currentState.filter((_, idx) => idx !== index));
   };
 
   const removeById = (keyId: keyof T, id: string | number): void => {
-    setState((currentState) => {
-      const idxItemFound = currentState.findIndex((item) => item[keyId] === id);
-      if (idxItemFound !== -1) {
-        const newState = [...currentState];
-        newState.splice(idxItemFound, 1);
-        return newState;
-      }
-      return currentState;
-    });
+    setState((currentState) => currentState.filter((item) => item[keyId] !== id));
   };
 
   const set = (index: number | string, newValue: T) => {
@@ -66,6 +52,17 @@ export function useArrayState<T>(
     setState((prevItems) => {
       returnVal = prevItems.map((item: T, idx: number) =>
         idx === index ? { ...newValue } : item
+      );
+      return returnVal;
+    });
+    return returnVal;
+  };
+
+  const setById = <K extends keyof T>(keyId: K, id: string | number, newValue: T) => {
+    let returnVal: T[] = [];
+    setState((prevItems) => {
+      returnVal = prevItems.map((item: T) =>
+        item[keyId] === id ? { ...newValue } : item
       );
       return returnVal;
     });
@@ -95,5 +92,5 @@ export function useArrayState<T>(
     return find(state, value, attribute) !== -1;
   };
 
-  return [state, { add, remove, set, change, exists, find, removeById }];
+  return [state, { add, remove, set, setById, change, exists, find, removeById }];
 }
